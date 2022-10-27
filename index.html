@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <!-- JS -->
+    <script defer src="js/main.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Header -->
+    <div class="headerlike">
+        <div class="like like2" onclick="clickCurr()"><p class="likep">Stopwatch</p></div>
+        <div class="like like1 active" onclick="clickCal()"><p class="likep">Flip Coin</p></div>
+        <div class="like like3" onclick="clickTemp()"><p class="likep">Temperature Converter</p></div>
+    </div>
+
+    <!-- Main content -->
+    <div class="bodycontent">
+
+        <!-- Stopwatch -->
+        <div class="stopwatch">
+            <center>
+            <div class="stopface">
+                <p class="timings mins" name="min">00</p>
+                <label for="min">m</label>
+                <p class="collen">:</p>
+                <p class="timings sec" name="sec">00</p>
+                <label for="sec">s</label>
+                <p class="collen">:</p>
+                <p class="timings milisec" name="milisec">00</p>
+                <label for="milisec"></label>
+            </div>
+            <div class="buttons">
+                <button class="start" onclick="start()">START</button>
+                <button class="stop" onclick="stop()">STOP</button>
+                <button class="reset" onclick="reset()">RESET</button>
+            </div>
+        </center>
+        </div>
+
+        <!-- Coin Toss -->
+        <div class="cointoss">
+            <div class="coin" id="coin">
+                <div class="heads">
+                    <img src="assets/heads.svg">
+                </div>
+                <div class="tails">
+                    <img src="assets/tails.svg">
+                </div>
+            </div>
+            <center>
+                <div class="buttonss">
+                    <button id="flip-button">
+                        Flip Coin
+                    </button> <br>
+                    <button id="reset-button">
+                        stop
+                    </button>
+                </div>
+            </center>
+         </div>
+
+         <!-- Temperature Converter -->
+        <div class="tempcon">
+            <center>
+            <div class="degreehead">
+                <p class="celcius">Celcius</p>
+                <div>
+                    <p class="kelvin activebtn" onclick="kelcli()">Kelvin</p>
+                <p class="fahrenheit" onclick="fahcli()">Fahrenheit</p>
+                </div>
+            </div>
+            <div class="tempinput">
+               <div class="celtokel">
+                <p> Celcius (C)</p>
+                <input type="number" class="celinput" placeholder="Celcius" value="0" id="celinput" autofocus> <br>
+                <p> Kelvin (K)</p>
+                <input type="number" class="kelinput" placeholder="Kelvin" value="273.15" id="kelinput">
+               </div>
+               <div class="celtofah">
+                <p> Celcius (C)</p>
+                <input type="number" class="celinput" placeholder="Celcius" value="0" id="celinput1" autofocus> <br>
+                <p> Fahrenheit (F) </p>
+                <input type="number" class="fahinput" placeholder="Fahrenheit" value="32" id="fahinput">
+               </div>
+            </div>
+        </center>
+        </div>
+    </div>
+</body>
+</html>
